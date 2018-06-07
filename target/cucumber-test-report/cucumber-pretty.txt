@@ -1,0 +1,43 @@
+Feature: Walmart search box functionality
+
+  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 1.Valid search in the search box                         # src/test/resources/features/searchBoxFunctionality.feature:6
+    When User enter in the search box "Nike Benassi Solarsoft Slide" # WalmartSearchBoxSteps.user_enter_in_the_search_box(String)
+    Then Searched product page should dispaly                        # WalmartSearchBoxSteps.searched_product_page_should_dispaly()
+
+  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 2.Invalid search in the search box                    # src/test/resources/features/searchBoxFunctionality.feature:10
+    When User enter an invalid product in the search box "eerrtt" # WalmartSearchBoxSteps.user_enter_an_invalid_product_in_the_search_box(String)
+    Then No product match massage should display                  # WalmartSearchBoxSteps.no_product_match_massage_should_display()
+
+  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 3.Count search box dropdown list       # src/test/resources/features/searchBoxFunctionality.feature:14
+    When User click on search box drop down button # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
+    Then List going to show 26 options             # WalmartSearchBoxSteps.list_going_to_show_options(int)
+
+  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 4.Verify all the options are shown in the list # src/test/resources/features/searchBoxFunctionality.feature:18
+    When User click on search box drop down button         # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
+    Then List going to show this options                   # WalmartSearchBoxSteps.list_going_to_show_this_options(DataTable)
+
+  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 5.Verify advance search in the search box # src/test/resources/features/searchBoxFunctionality.feature:23
+    When User click on search box drop down button    # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
+    And Select option"baby"                           # WalmartSearchBoxSteps.select_option(String)
+    And User enter in the search box "socks"          # WalmartSearchBoxSteps.user_enter_in_the_search_box(String)
+    Then Page going to show 34 products               # WalmartSearchBoxSteps.page_going_to_show_products(int)
