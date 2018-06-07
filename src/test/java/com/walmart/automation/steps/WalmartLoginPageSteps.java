@@ -5,6 +5,7 @@ import com.walmart.automation.framework.hooks.BaseSteps;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
@@ -41,11 +42,21 @@ public class WalmartLoginPageSteps extends BaseSteps {
         loginPageSigninButton.click();
     }
 
+//    login success assertion
     @Then("^\"([^\"]*)\" pagetitle should display$")
     public void page_should_display(String expected){
         driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
         String actual = driver.getTitle();
         System.out.println("actual is----->" + actual);
+        Assert.assertEquals(expected,actual);
+    }
+
+//    login not successful assertion
+    @Then("^\"([^\"]*)\"this error massage should display$")
+    public void this_error_massage_should_display(String expected){
+        driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
+        String actual = driver.findElement(WalmartLoginPageController.loginNotSuccessfulAssertion).getText();
+        System.out.println("actual is ----->" + actual);
         Assert.assertEquals(expected,actual);
     }
 }

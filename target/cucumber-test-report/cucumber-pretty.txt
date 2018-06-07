@@ -1,43 +1,57 @@
-Feature: Walmart search box functionality
+Feature: Walmart login page funtionalities
 
-  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
+  Background: Not a valideted home page     # src/test/resources/features/loginPageFunctionality.feature:2
     When Open browser and start application # CommonSteps.open_browser_and_start_application()
     Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
 
-  Scenario: 1.Valid search in the search box                         # src/test/resources/features/searchBoxFunctionality.feature:6
-    When User enter in the search box "Nike Benassi Solarsoft Slide" # WalmartSearchBoxSteps.user_enter_in_the_search_box(String)
-    Then Searched product page should dispaly                        # WalmartSearchBoxSteps.searched_product_page_should_dispaly()
+  Scenario: 1.User put all the valid informations  # src/test/resources/features/loginPageFunctionality.feature:9
+    When User write email "demo.auser01@gmail.com" # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"          # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Login" pagetitle should display          # WalmartLoginPageSteps.page_should_display(String)
 
-  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
+  Background: Not a valideted home page     # src/test/resources/features/loginPageFunctionality.feature:2
     When Open browser and start application # CommonSteps.open_browser_and_start_application()
     Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
 
-  Scenario: 2.Invalid search in the search box                    # src/test/resources/features/searchBoxFunctionality.feature:10
-    When User enter an invalid product in the search box "eerrtt" # WalmartSearchBoxSteps.user_enter_an_invalid_product_in_the_search_box(String)
-    Then No product match massage should display                  # WalmartSearchBoxSteps.no_product_match_massage_should_display()
+  Scenario: 2. User put invalid email and valid password                                               # src/test/resources/features/loginPageFunctionality.feature:15
+    When User write email "demo.user@gmail.com"                                                        # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demmowalmart"                                                             # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                                                    # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Your password and email do not match. Please try again or "this error massage should display # WalmartLoginPageSteps.this_error_massage_should_display(String)
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='alert active alert-error alert-block']/span/button"}
+        (Session info: chrome=66.0.3359.181)
+        (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 0 milliseconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+      System info: host: 'SHIFT-PC01', ip: '192.168.0.105', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_144'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\Users\SHIFTS~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
+      Session ID: 161dd1b351e6ee69595069e18db460ad
+      *** Element info: {Using=xpath, value=//span[@class='alert active alert-error alert-block']/span/button}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+      	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+      	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+      	at com.walmart.automation.steps.WalmartLoginPageSteps.this_error_massage_should_display(WalmartLoginPageSteps.java:57)
+      	at ✽.Then "Your password and email do not match. Please try again or "this error massage should display(src/test/resources/features/loginPageFunctionality.feature:19)
 
-  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
-    When Open browser and start application # CommonSteps.open_browser_and_start_application()
-    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
-
-  Scenario: 3.Count search box dropdown list       # src/test/resources/features/searchBoxFunctionality.feature:14
-    When User click on search box drop down button # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
-    Then List going to show 26 options             # WalmartSearchBoxSteps.list_going_to_show_options(int)
-
-  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
-    When Open browser and start application # CommonSteps.open_browser_and_start_application()
-    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
-
-  Scenario: 4.Verify all the options are shown in the list # src/test/resources/features/searchBoxFunctionality.feature:18
-    When User click on search box drop down button         # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
-    Then List going to show this options                   # WalmartSearchBoxSteps.list_going_to_show_this_options(DataTable)
-
-  Background: Not a valideted search box    # src/test/resources/features/searchBoxFunctionality.feature:2
-    When Open browser and start application # CommonSteps.open_browser_and_start_application()
-    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
-
-  Scenario: 5.Verify advance search in the search box # src/test/resources/features/searchBoxFunctionality.feature:23
-    When User click on search box drop down button    # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
-    And Select option"baby"                           # WalmartSearchBoxSteps.select_option(String)
-    And User enter in the search box "socks"          # WalmartSearchBoxSteps.user_enter_in_the_search_box(String)
-    Then Page going to show 34 products               # WalmartSearchBoxSteps.page_going_to_show_products(int)

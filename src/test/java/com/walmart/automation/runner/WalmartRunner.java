@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 //        tags = "@debug",
 //        dryRun = true,
 
-        features = "src/test/resources/features/searchBoxFunctionality.feature",
+        features = "src/test/resources/features/loginPageFunctionality.feature",
 //        features = "src/test/resources/features/",
 
         glue = {"com.walmart.automation.steps",

@@ -1,18 +1,18 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/searchBoxFunctionality.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/loginPageFunctionality.feature");
 formatter.feature({
   "line": 1,
-  "name": "Walmart search box functionality",
+  "name": "Walmart login page funtionalities",
   "description": "",
-  "id": "walmart-search-box-functionality",
+  "id": "walmart-login-page-funtionalities",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 5668857300,
+  "duration": 5535581401,
   "status": "passed"
 });
 formatter.background({
   "line": 2,
-  "name": "Not a valideted search box",
+  "name": "Not a valideted home page",
   "description": "",
   "type": "background",
   "keyword": "Background"
@@ -27,146 +27,147 @@ formatter.step({
   "name": "Walmart homepage shoule dispaly",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "CommonSteps.open_browser_and_start_application()"
+formatter.step({
+  "line": 5,
+  "name": "User click on account button",
+  "keyword": "When "
 });
-formatter.result({
-  "duration": 2470656500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
-});
-formatter.result({
-  "duration": 19715000,
-  "status": "passed"
-});
-formatter.scenario({
+formatter.step({
   "line": 6,
-  "name": "1.Valid search in the search box",
-  "description": "",
-  "id": "walmart-search-box-functionality;1.valid-search-in-the-search-box",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "name": "Click on signin option",
+  "keyword": "And "
 });
 formatter.step({
   "line": 7,
-  "name": "User enter in the search box \"Nike Benassi Solarsoft Slide\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 8,
-  "name": "Searched product page should dispaly",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Nike Benassi Solarsoft Slide",
-      "offset": 30
-    }
-  ],
-  "location": "WalmartSearchBoxSteps.user_enter_in_the_search_box(String)"
-});
-formatter.result({
-  "duration": 5501167400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "WalmartSearchBoxSteps.searched_product_page_should_dispaly()"
-});
-formatter.result({
-  "duration": 10812500,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 788153500,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3633826600,
-  "status": "passed"
-});
-formatter.background({
-  "line": 2,
-  "name": "Not a valideted search box",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 3,
-  "name": "Open browser and start application",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 4,
-  "name": "Walmart homepage shoule dispaly",
+  "name": "Login \"Login\" page should display",
   "keyword": "Then "
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 2123383500,
+  "duration": 3241040400,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 21879500,
+  "duration": 12544400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WalmartHomePageSteps.user_click_on_account_button()"
+});
+formatter.result({
+  "duration": 153395600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WalmartLoginPageSteps.click_on_signin_option()"
+});
+formatter.result({
+  "duration": 2521707601,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Login",
+      "offset": 7
+    }
+  ],
+  "location": "WalmartLoginPageSteps.login_page_should_display(String)"
+});
+formatter.result({
+  "duration": 12712100,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 10,
-  "name": "2.Invalid search in the search box",
+  "line": 9,
+  "name": "1.User put all the valid informations",
   "description": "",
-  "id": "walmart-search-box-functionality;2.invalid-search-in-the-search-box",
+  "id": "walmart-login-page-funtionalities;1.user-put-all-the-valid-informations",
   "type": "scenario",
   "keyword": "Scenario"
+});
+formatter.step({
+  "line": 10,
+  "name": "User write email \"demo.auser01@gmail.com\"",
+  "keyword": "When "
 });
 formatter.step({
   "line": 11,
-  "name": "User enter an invalid product in the search box \"eerrtt\"",
-  "keyword": "When "
+  "name": "User write password \"demowalmart\"",
+  "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "No product match massage should display",
+  "name": "User click on signin button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "\"Login\" pagetitle should display",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "eerrtt",
-      "offset": 49
+      "val": "demo.auser01@gmail.com",
+      "offset": 18
     }
   ],
-  "location": "WalmartSearchBoxSteps.user_enter_an_invalid_product_in_the_search_box(String)"
+  "location": "WalmartLoginPageSteps.user_write_email(String)"
 });
 formatter.result({
-  "duration": 2341953400,
+  "duration": 489890900,
   "status": "passed"
 });
 formatter.match({
-  "location": "WalmartSearchBoxSteps.no_product_match_massage_should_display()"
+  "arguments": [
+    {
+      "val": "demowalmart",
+      "offset": 21
+    }
+  ],
+  "location": "WalmartLoginPageSteps.user_write_password(String)"
 });
 formatter.result({
-  "duration": 38131500,
+  "duration": 322797200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WalmartLoginPageSteps.user_click_on_signin_button()"
+});
+formatter.result({
+  "duration": 173189600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Login",
+      "offset": 1
+    }
+  ],
+  "location": "WalmartLoginPageSteps.page_should_display(String)"
+});
+formatter.result({
+  "duration": 7324899,
   "status": "passed"
 });
 formatter.after({
-  "duration": 685231500,
+  "duration": 690562400,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3616430100,
+  "duration": 3828481600,
   "status": "passed"
 });
 formatter.background({
   "line": 2,
-  "name": "Not a valideted search box",
+  "name": "Not a valideted home page",
   "description": "",
   "type": "background",
   "keyword": "Background"
@@ -181,277 +182,140 @@ formatter.step({
   "name": "Walmart homepage shoule dispaly",
   "keyword": "Then "
 });
+formatter.step({
+  "line": 5,
+  "name": "User click on account button",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 6,
+  "name": "Click on signin option",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 7,
+  "name": "Login \"Login\" page should display",
+  "keyword": "Then "
+});
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 2630124300,
+  "duration": 3941209699,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 20856500,
+  "duration": 11949399,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WalmartHomePageSteps.user_click_on_account_button()"
+});
+formatter.result({
+  "duration": 156653400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WalmartLoginPageSteps.click_on_signin_option()"
+});
+formatter.result({
+  "duration": 3057159800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Login",
+      "offset": 7
+    }
+  ],
+  "location": "WalmartLoginPageSteps.login_page_should_display(String)"
+});
+formatter.result({
+  "duration": 7843499,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 14,
-  "name": "3.Count search box dropdown list",
+  "line": 15,
+  "name": "2. User put invalid email and valid password",
   "description": "",
-  "id": "walmart-search-box-functionality;3.count-search-box-dropdown-list",
+  "id": "walmart-login-page-funtionalities;2.-user-put-invalid-email-and-valid-password",
   "type": "scenario",
   "keyword": "Scenario"
-});
-formatter.step({
-  "line": 15,
-  "name": "User click on search box drop down button",
-  "keyword": "When "
 });
 formatter.step({
   "line": 16,
-  "name": "List going to show 26 options",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()"
-});
-formatter.result({
-  "duration": 295448200,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "26",
-      "offset": 19
-    }
-  ],
-  "location": "WalmartSearchBoxSteps.list_going_to_show_options(int)"
-});
-formatter.result({
-  "duration": 32901800,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 653674300,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3567449500,
-  "status": "passed"
-});
-formatter.background({
-  "line": 2,
-  "name": "Not a valideted search box",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 3,
-  "name": "Open browser and start application",
+  "name": "User write email \"demo.user@gmail.com\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 4,
-  "name": "Walmart homepage shoule dispaly",
-  "keyword": "Then "
+  "line": 17,
+  "name": "User write password \"demmowalmart\"",
+  "keyword": "And "
 });
-formatter.match({
-  "location": "CommonSteps.open_browser_and_start_application()"
-});
-formatter.result({
-  "duration": 2243674400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
-});
-formatter.result({
-  "duration": 36709800,
-  "status": "passed"
-});
-formatter.scenario({
+formatter.step({
   "line": 18,
-  "name": "4.Verify all the options are shown in the list",
-  "description": "",
-  "id": "walmart-search-box-functionality;4.verify-all-the-options-are-shown-in-the-list",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "name": "User click on signin button",
+  "keyword": "And "
 });
 formatter.step({
   "line": 19,
-  "name": "User click on search box drop down button",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 20,
-  "name": "List going to show this options",
-  "rows": [
-    {
-      "cells": [
-        "All Departments",
-        "Auto \u0026 Tire",
-        "Baby",
-        "Beauty",
-        "Books",
-        "Cell Phones",
-        "Clothing",
-        "Electronics",
-        "Food",
-        "Gifts \u0026 Registry",
-        "Health",
-        "Home",
-        "Home Improvement",
-        "Household Essentials",
-        "Jewelry",
-        "Movies",
-        "Music",
-        "Office",
-        "Party \u0026 Occasions",
-        "Patio \u0026 Garden",
-        "Pets",
-        "Pharmacy",
-        "Photo Center",
-        "Sports \u0026 Outdoors",
-        "Toys",
-        "Video Games"
-      ],
-      "line": 21
-    }
-  ],
+  "name": "\"Your password and email do not match. Please try again or \"this error massage should display",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()"
+  "arguments": [
+    {
+      "val": "demo.user@gmail.com",
+      "offset": 18
+    }
+  ],
+  "location": "WalmartLoginPageSteps.user_write_email(String)"
 });
 formatter.result({
-  "duration": 222481500,
+  "duration": 468729200,
   "status": "passed"
 });
 formatter.match({
-  "location": "WalmartSearchBoxSteps.list_going_to_show_this_options(DataTable)"
+  "arguments": [
+    {
+      "val": "demmowalmart",
+      "offset": 21
+    }
+  ],
+  "location": "WalmartLoginPageSteps.user_write_password(String)"
 });
 formatter.result({
-  "duration": 811170100,
+  "duration": 332301500,
   "status": "passed"
 });
+formatter.match({
+  "location": "WalmartLoginPageSteps.user_click_on_signin_button()"
+});
+formatter.result({
+  "duration": 182129299,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Your password and email do not match. Please try again or ",
+      "offset": 1
+    }
+  ],
+  "location": "WalmartLoginPageSteps.this_error_massage_should_display(String)"
+});
+formatter.result({
+  "duration": 42866901,
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@class\u003d\u0027alert active alert-error alert-block\u0027]/span/button\"}\n  (Session info: chrome\u003d66.0.3359.181)\n  (Driver info: chromedriver\u003d2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform\u003dWindows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027SHIFT-PC01\u0027, ip: \u0027192.168.0.105\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_144\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\\Users\\SHIFTS~1\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}\nSession ID: 161dd1b351e6ee69595069e18db460ad\n*** Element info: {Using\u003dxpath, value\u003d//span[@class\u003d\u0027alert active alert-error alert-block\u0027]/span/button}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat com.walmart.automation.steps.WalmartLoginPageSteps.this_error_massage_should_display(WalmartLoginPageSteps.java:57)\r\n\tat ✽.Then \"Your password and email do not match. Please try again or \"this error massage should display(src/test/resources/features/loginPageFunctionality.feature:19)\r\n",
+  "status": "failed"
+});
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 710855700,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3653746200,
-  "status": "passed"
-});
-formatter.background({
-  "line": 2,
-  "name": "Not a valideted search box",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 3,
-  "name": "Open browser and start application",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 4,
-  "name": "Walmart homepage shoule dispaly",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "CommonSteps.open_browser_and_start_application()"
-});
-formatter.result({
-  "duration": 2488268100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
-});
-formatter.result({
-  "duration": 25473300,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 23,
-  "name": "5.Verify advance search in the search box",
-  "description": "",
-  "id": "walmart-search-box-functionality;5.verify-advance-search-in-the-search-box",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 24,
-  "name": "User click on search box drop down button",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 25,
-  "name": "Select option\"baby\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "User enter in the search box \"socks\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "Page going to show 34 products",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()"
-});
-formatter.result({
-  "duration": 174844100,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "baby",
-      "offset": 14
-    }
-  ],
-  "location": "WalmartSearchBoxSteps.select_option(String)"
-});
-formatter.result({
-  "duration": 280433000,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "socks",
-      "offset": 30
-    }
-  ],
-  "location": "WalmartSearchBoxSteps.user_enter_in_the_search_box(String)"
-});
-formatter.result({
-  "duration": 4294526600,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "34",
-      "offset": 19
-    }
-  ],
-  "location": "WalmartSearchBoxSteps.page_going_to_show_products(int)"
-});
-formatter.result({
-  "duration": 38637500,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 653170000,
+  "duration": 1006631801,
   "status": "passed"
 });
 });
