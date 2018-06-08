@@ -11,13 +11,15 @@ import org.junit.runner.RunWith;
 //        tags = "@debug",
 //        dryRun = true,
 
-        features = "src/test/resources/features/loginPageFunctionality.feature",
+        features = "src/test/resources/features/",
 //        features = "src/test/resources/features/",
 
         glue = {"com.walmart.automation.steps",
                 "com.walmart.automation.framework.hooks"},
 
-        monochrome = true,
+
+        strict = true,
+//        monochrome = true,
 
         plugin = {"pretty:target/cucumber-test-report/cucumber-pretty.txt",
                   "html:target/cucumber-html-report"}
