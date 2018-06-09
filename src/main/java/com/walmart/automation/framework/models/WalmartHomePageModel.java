@@ -1,8 +1,8 @@
-package com.walmart.automation.framework.controller;
+package com.walmart.automation.framework.models;
 
 import org.openqa.selenium.By;
 
-public class WalmartHomePageController {
+public class WalmartHomePageModel {
     public static By homePageNavigationMenuButton = By.xpath("//button[@data-automation-id='header-Header-sparkButton']");
     public static By topLinks = By.xpath("//div[@class='GlobalHeaderSparkMenu-optionalTopLinks']/a");
     public static By optionalToplinks = By.xpath("//div[@class='GlobalHeaderSparkMenu-optionalTopLinks']/a");

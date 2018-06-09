@@ -1,6 +1,6 @@
 package com.walmart.automation.steps;
 
-import com.walmart.automation.framework.controller.WalmartSearchBoxController;
+import com.walmart.automation.framework.models.WalmartSearchBoxModel;
 import com.walmart.automation.framework.hooks.BaseSteps;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
@@ -23,7 +23,7 @@ public class WalmartSearchBoxSteps extends BaseSteps {
 
     @When("^User enter in the search box \"([^\"]*)\"$")
     public void user_enter_in_the_search_box(String searchingProduct){
-        WebElement searcBoxElement = driver.findElement(WalmartSearchBoxController.searchBox);
+        WebElement searcBoxElement = driver.findElement(WalmartSearchBoxModel.searchBox);
         searcBoxElement.sendKeys(searchingProduct);
         searcBoxElement.sendKeys(Keys.ENTER);
     }
@@ -38,14 +38,14 @@ public class WalmartSearchBoxSteps extends BaseSteps {
 //    for invalid search
     @When("^User enter an invalid product in the search box \"([^\"]*)\"$")
     public void user_enter_an_invalid_product_in_the_search_box(String searchingInvalidProduct){
-        WebElement searcBoxElement = driver.findElement(WalmartSearchBoxController.searchBox);
+        WebElement searcBoxElement = driver.findElement(WalmartSearchBoxModel.searchBox);
         searcBoxElement.sendKeys(searchingInvalidProduct);
         searcBoxElement.sendKeys(Keys.ENTER);
     }
 
     @Then("^No product match massage should display$")
     public void no_product_match_massage_should_display(){
-        String actualMassage = driver.findElement(WalmartSearchBoxController.productNotMatchAssertion).getText();
+        String actualMassage = driver.findElement(WalmartSearchBoxModel.productNotMatchAssertion).getText();
         System.out.println(actualMassage);
         Assert.assertEquals("Sorry, no products matched \"eerrtt\"",actualMassage);
     }
@@ -53,12 +53,12 @@ public class WalmartSearchBoxSteps extends BaseSteps {
 //    for varify dropdown list size
     @When("^User click on search box drop down button$")
     public void user_click_on_search_box_drop_down_button(){
-        WebElement searchDropDownButtonElement = driver.findElement(WalmartSearchBoxController.searchDropDownButton);
+        WebElement searchDropDownButtonElement = driver.findElement(WalmartSearchBoxModel.searchDropDownButton);
         searchDropDownButtonElement.click();
     }
     @Then("^List going to show (\\d+) options$")
     public void list_going_to_show_options(int totalSize){
-        List<WebElement>options = driver.findElements(WalmartSearchBoxController.totalSearchDropDownButtonOptions);
+        List<WebElement>options = driver.findElements(WalmartSearchBoxModel.totalSearchDropDownButtonOptions);
         int totalNumberOfOptions = options.size();
         Assert.assertEquals(totalSize,totalNumberOfOptions);
     }
@@ -102,7 +102,7 @@ public class WalmartSearchBoxSteps extends BaseSteps {
     //for verifing advance search
     @When("^Select option\"([^\"]*)\"$")
     public void select_option(String arg1) throws Throwable {
-        WebElement optionSelected = driver.findElement(WalmartSearchBoxController.advaceSearchSelectedOption);
+        WebElement optionSelected = driver.findElement(WalmartSearchBoxModel.advaceSearchSelectedOption);
         String text = optionSelected.getText();
         if(text.equalsIgnoreCase("baby")){
             optionSelected.click();
@@ -111,7 +111,7 @@ public class WalmartSearchBoxSteps extends BaseSteps {
 
     @Then("^Page going to show (\\d+) products$")
     public void page_going_to_show_products(int expectedNumberOfProduct){
-        List<WebElement>searchedProducts = driver.findElements(WalmartSearchBoxController.totalNumberOfproductInAdvanceSearch);
+        List<WebElement>searchedProducts = driver.findElements(WalmartSearchBoxModel.totalNumberOfproductInAdvanceSearch);
         int actualNumberOfSearchedProduct = searchedProducts.size();
         System.out.println("actualNumberOfSearchedProduct is :" + actualNumberOfSearchedProduct);
         Assert.assertEquals(expectedNumberOfProduct,actualNumberOfSearchedProduct);

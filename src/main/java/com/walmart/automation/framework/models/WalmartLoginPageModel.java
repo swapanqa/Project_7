@@ -1,8 +1,8 @@
-package com.walmart.automation.framework.controller;
+package com.walmart.automation.framework.models;
 
 import org.openqa.selenium.By;
 
-public class WalmartLoginPageController {
+public class WalmartLoginPageModel {
     public static By homePageSigninButton = By.xpath("//a[@data-tl-id='GlobalAccountMenu-link-0']");
     public static By emailTextBox = By.xpath("//input[@data-tl-id='signin-email-input']");
     public static By passwordTextBox = By.xpath("//input[@data-tl-id='signin-password-input']");

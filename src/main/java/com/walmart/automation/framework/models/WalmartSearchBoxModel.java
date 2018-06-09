@@ -1,8 +1,8 @@
-package com.walmart.automation.framework.controller;
+package com.walmart.automation.framework.models;
 
 import org.openqa.selenium.By;
 
-public class WalmartSearchBoxController {
+public class WalmartSearchBoxModel {
     public static By searchBox = By.xpath("//input[@id='global-search-input']");
     public static By productNotMatchAssertion = By.xpath("//div[@id='mainSearchContent']//strong");
     public static By searchDropDownButton = By.xpath("//button[@id='listboxActive']");

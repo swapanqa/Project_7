@@ -1,41 +1,28 @@
-Feature: Walmart login page funtionalities
+Feature: User account functionality
 
-  Background: Not a valideted home page     # src/test/resources/features/loginPageFunctionality.feature:2
-    When Open browser and start application # CommonSteps.open_browser_and_start_application()
-    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
-    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
-    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
-    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
-
-  Scenario: 1.User put all the valid informations  # src/test/resources/features/loginPageFunctionality.feature:9
+  Background: Given Not a valideted home page      # src/test/resources/features/userAccountFunctionality.feature:2
+    When Open browser and start application        # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly           # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button              # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option                     # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display         # WalmartLoginPageSteps.login_page_should_display(String)
     When User write email "demo.auser01@gmail.com" # WalmartLoginPageSteps.user_write_email(String)
     And User write password "demowalmart"          # WalmartLoginPageSteps.user_write_password(String)
     And User click on signin button                # WalmartLoginPageSteps.user_click_on_signin_button()
     Then "Login" pagetitle should display          # WalmartLoginPageSteps.page_should_display(String)
 
-  Background: Not a valideted home page     # src/test/resources/features/loginPageFunctionality.feature:2
-    When Open browser and start application # CommonSteps.open_browser_and_start_application()
-    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
-    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
-    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
-    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
-
-  Scenario: 2. User put invalid email and valid password                                               # src/test/resources/features/loginPageFunctionality.feature:15
-    When User write email "demo.user@gmail.com"                                                        # WalmartLoginPageSteps.user_write_email(String)
-    And User write password "demmowalmart"                                                             # WalmartLoginPageSteps.user_write_password(String)
-    And User click on signin button                                                                    # WalmartLoginPageSteps.user_click_on_signin_button()
-    Then "Your password and email do not match. Please try again or "this error massage should display # WalmartLoginPageSteps.this_error_massage_should_display(String)
-      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='alert active alert-error alert-block']/span/button"}
+  Scenario: 1. User account button's options are working properly                # src/test/resources/features/userAccountFunctionality.feature:13
+    When User Click on loged in user account button                              # WalmartUserAccountPageSteps.user_Click_on_loged_in_user_account_button()
+      org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
         (Session info: chrome=66.0.3359.181)
-        (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+        (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
       Command duration or timeout: 0 milliseconds
-      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
       Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-      System info: host: 'SHIFT-PC01', ip: '192.168.0.105', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_144'
+      System info: host: 'SHIFT-PC01', ip: '192.168.0.109', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_144'
       Driver info: org.openqa.selenium.chrome.ChromeDriver
-      Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\Users\SHIFTS~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-      Session ID: 161dd1b351e6ee69595069e18db460ad
-      *** Element info: {Using=xpath, value=//span[@class='alert active alert-error alert-block']/span/button}
+      Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\SHIFTS~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
+      Session ID: fe4ae3ba48f98249deb087afd3092950
       	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
       	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
       	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -48,10 +35,9 @@ Feature: Walmart login page funtionalities
       	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
       	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
       	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-      	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-      	at com.walmart.automation.steps.WalmartLoginPageSteps.this_error_massage_should_display(WalmartLoginPageSteps.java:57)
-      	at ✽.Then "Your password and email do not match. Please try again or "this error massage should display(src/test/resources/features/loginPageFunctionality.feature:19)
+      	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+      	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+      	at com.walmart.automation.steps.WalmartUserAccountPageSteps.user_Click_on_loged_in_user_account_button(WalmartUserAccountPageSteps.java:16)
+      	at ✽.When User Click on loged in user account button(src/test/resources/features/userAccountFunctionality.feature:14)
 
+    Then User click all the options and check all the button show the right page # WalmartUserAccountPageSteps.user_click_all_the_options_and_check_all_the_button_show_the_right_page()

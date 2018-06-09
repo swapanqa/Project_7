@@ -1,4 +1,4 @@
-package com.walmart.automation.framework.controller;
+package com.walmart.automation.framework.models;
 
 import org.openqa.selenium.By;
 

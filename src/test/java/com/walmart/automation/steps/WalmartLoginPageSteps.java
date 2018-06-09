@@ -1,11 +1,10 @@
 package com.walmart.automation.steps;
 
-import com.walmart.automation.framework.controller.WalmartLoginPageController;
+import com.walmart.automation.framework.models.WalmartLoginPageModel;
 import com.walmart.automation.framework.hooks.BaseSteps;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.concurrent.TimeUnit;
@@ -14,7 +13,7 @@ public class WalmartLoginPageSteps extends BaseSteps {
 
     @When("^Click on signin option$")
     public void click_on_signin_option(){
-        WebElement homePageSigninOptionElement = driver.findElement(WalmartLoginPageController.homePageSigninButton);
+        WebElement homePageSigninOptionElement = driver.findElement(WalmartLoginPageModel.homePageSigninButton);
         homePageSigninOptionElement.click();
     }
 
@@ -25,20 +24,20 @@ public class WalmartLoginPageSteps extends BaseSteps {
     }
 
     @When("^User write email \"([^\"]*)\"$")
-    public void user_write_email(String email){
-        WebElement emailElement = driver.findElement(WalmartLoginPageController.emailTextBox);
+    public void user_write_email(String email) throws Throwable {
+        WebElement emailElement = driver.findElement(WalmartLoginPageModel.emailTextBox);
         emailElement.sendKeys(email);
     }
 
     @When("^User write password \"([^\"]*)\"$")
     public void user_write_password(String password){
-        WebElement passwordElement = driver.findElement(WalmartLoginPageController.passwordTextBox);
+        WebElement passwordElement = driver.findElement(WalmartLoginPageModel.passwordTextBox);
         passwordElement.sendKeys(password);
     }
 
     @When("^User click on signin button$")
     public void user_click_on_signin_button(){
-        WebElement loginPageSigninButton = driver.findElement(WalmartLoginPageController.loginPageSigninButton);
+        WebElement loginPageSigninButton = driver.findElement(WalmartLoginPageModel.loginPageSigninButton);
         loginPageSigninButton.click();
     }
 
@@ -55,7 +54,7 @@ public class WalmartLoginPageSteps extends BaseSteps {
     @Then("^\"([^\"]*)\"this error massage should display$")
     public void this_error_massage_should_display(String expected){
         driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
-        String actual = driver.findElement(WalmartLoginPageController.loginNotSuccessfulAssertion).getText();
+        String actual = driver.findElement(WalmartLoginPageModel.loginNotSuccessfulAssertion).getText();
         System.out.println("actual is ----->" + actual);
         Assert.assertEquals(expected,actual);
     }
