@@ -1,5 +1,6 @@
 package com.walmart.automation.steps;
 
+import com.aventstack.extentreports.Status;
 import com.walmart.automation.framework.models.WalmartHomePageModel;
 import com.walmart.automation.framework.hooks.BaseSteps;
 import cucumber.api.DataTable;
@@ -24,8 +25,7 @@ public class WalmartHomePageSteps extends BaseSteps {
     }
     @When("^User click on navigation menu button$")
     public void user_click_on_navigation_menu_button(){
-        WebElement navigationMenuButton = driver.findElement(WalmartHomePageModel.homePageNavigationMenuButton);
-        navigationMenuButton.click();
+        getApplicationController().getHomePageController().navigationButtonClick();
     }
 
     @Then("^GlobalHeaderSparkMenu-optionalTopLinks are going to show this options$")
@@ -52,7 +52,7 @@ public class WalmartHomePageSteps extends BaseSteps {
     }
     //Verifing datatable's product with actual product
     public void verifyDropDownOptions(String[] expectedMenuList){
-        List<WebElement>options = driver.findElements(WalmartHomePageModel.topLinks);
+        List<WebElement>options = driver.findElements(WalmartHomePageModel.getTopLinks());
         String[] actualItemTexts = new String[options.size()];
         int count = 0;
         for (WebElement item : options) {
@@ -66,7 +66,7 @@ public class WalmartHomePageSteps extends BaseSteps {
 //    verifing GlobalHeaderSparkMenu-optionalTopLinks are working properly
     @Then("^GlobalHeaderSparkMenu-optionalTopLinks are working properly$")
     public void globalheadersparkmenu_optionalTopLinks_are_working_properly() throws Throwable {
-        List <WebElement> totalLinks = driver.findElements(WalmartHomePageModel.optionalToplinks);
+        List <WebElement> totalLinks = driver.findElements(WalmartHomePageModel.getOptionalCampaignLinks());
 //        totalLinks.addAll(driver.findElements(By.tagName("img")));
         System.out.println("total number of links and images ----- " + totalLinks.size());
 
@@ -91,7 +91,7 @@ public class WalmartHomePageSteps extends BaseSteps {
 //    verifing GlobalHeaderSparkMenu-optionalCampaignLinks are working properly
     @Then("^GlobalHeaderSparkMenu-optionalCampaignLinks are working properly$")
     public void globalheadersparkmenu_optionalCampaignLinks_are_working_properly() throws Throwable{
-        List <WebElement> totalLinks = driver.findElements(WalmartHomePageModel.optionalCampaignLinks);
+        List <WebElement> totalLinks = driver.findElements(WalmartHomePageModel.getOptionalCampaignLinks());
         //totalLinks.addAll(driver.findElements(By.tagName("img")));
         System.out.println("total number of links and images ----- " + totalLinks.size());
 
@@ -124,7 +124,7 @@ public class WalmartHomePageSteps extends BaseSteps {
 //    verify grocery button is working properly
     @When("^User click on grocery button$")
     public void user_click_on_grocery_button(){
-        WebElement groceryButton = driver.findElement(WalmartHomePageModel.homePageGroceryButton);
+        WebElement groceryButton = driver.findElement(WalmartHomePageModel.getHomePageGroceryButton());
         groceryButton.click();
         driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
     }
@@ -138,13 +138,13 @@ public class WalmartHomePageSteps extends BaseSteps {
 //    verify account button is working properly
     @When("^User click on account button$")
     public void user_click_on_account_button() throws Throwable {
-        WebElement accountButton = driver.findElement(WalmartHomePageModel.homePageAccountButton);
+        WebElement accountButton = driver.findElement(WalmartHomePageModel.getHomePageAccountButton());
         accountButton.click();
     }
 
     @Then("^\"([^\"]*)\" dropdown is going to display$")
     public void dropdown_is_going_to_display(String expected) throws Throwable {
-        String actual = driver.findElement(WalmartHomePageModel.homePageAccountButtonAssert).getText();
+        String actual = driver.findElement(WalmartHomePageModel.getHomePageAccountButtonAssert()).getText();
         System.out.println("actual is ----->" + "" + actual);
         Assert.assertEquals(expected,actual);
     }
@@ -152,13 +152,13 @@ public class WalmartHomePageSteps extends BaseSteps {
 //    verify store location button is working properly
     @When("^User click on store location button$")
     public void user_click_on_store_location_button() throws Throwable {
-        WebElement locationButton =  driver.findElement(WalmartHomePageModel.homePageLocationButton);
+        WebElement locationButton =  driver.findElement(WalmartHomePageModel.getHomePageLocationButton());
         locationButton.click();
     }
 
     @Then("^\"([^\"]*)\" dropdown is going to show$")
     public void dropdown_is_going_to_show(String expected) throws Throwable {
-        String actual = driver.findElement(WalmartHomePageModel.homePageLocationButtonAssert).getText();
+        String actual = driver.findElement(WalmartHomePageModel.getHomePageLocationButtonAssert()).getText();
         System.out.println("actual is ----->" + "" + actual);
         Assert.assertEquals(expected,actual);
     }
@@ -166,7 +166,7 @@ public class WalmartHomePageSteps extends BaseSteps {
 //    verify cart button is working properly
     @When("^User click on cart button$")
     public void user_click_on_cart_button() throws Throwable {
-        WebElement cartButton = driver.findElement(WalmartHomePageModel.homePageCartButton);
+        WebElement cartButton = driver.findElement(WalmartHomePageModel.getHomePageCartButton());
         cartButton.click();
     }
 
@@ -179,13 +179,13 @@ public class WalmartHomePageSteps extends BaseSteps {
 //    verify all images and links are not broken
     @When("^User is in homepage$")
     public void user_is_in_homepage() throws InterruptedException {
-        Thread.sleep(5000);
+        getDelay().delayFor(4000);
     }
 
     @Then("^All link and images are not broken$")
     public void all_link_and_images_are_not_broken(){
-        List <WebElement> totalLinksAndImages = driver.findElements(WalmartHomePageModel.homePageLinks);
-        totalLinksAndImages.addAll(driver.findElements(WalmartHomePageModel.homePageImages));
+        List <WebElement> totalLinksAndImages = driver.findElements(WalmartHomePageModel.getHomePageLinks());
+        totalLinksAndImages.addAll(driver.findElements(WalmartHomePageModel.getHomePageImages()));
         System.out.println("total number of links and images are ----->" + totalLinksAndImages.size());
 
         List <String> activeLinks = new ArrayList<String>();

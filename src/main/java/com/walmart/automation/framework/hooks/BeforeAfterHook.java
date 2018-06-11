@@ -4,11 +4,8 @@ import com.walmart.automation.framework.driverfactory.DriverFactory;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BeforeAfterHook extends BaseSteps {
 
@@ -35,6 +32,7 @@ public class BeforeAfterHook extends BaseSteps {
             byte[] screenshot = ((TakesScreenshot)this.driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot,"image/png");
         }
+
 //        driver.close();
         DriverFactory.getInstance().removeDriver();
     }

@@ -4,6 +4,7 @@ Feature: Walmart home page functionality
     When Open browser and start application
     Then Walmart homepage shoule dispaly
 
+    @reportTest
    Scenario: 1.Verify navigation menu button is working
      When User click on navigation menu button
      Then GlobalHeaderSparkMenu-optionalTopLinks are going to show this options
