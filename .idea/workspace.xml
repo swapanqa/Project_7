@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bf4caf-4417-4829-8f30-5cf6d66d5cfa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/models/WalmartUserAccountHomePageModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartUserAccountHomePageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BaseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BeforeAfterHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BeforeAfterHook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/models/WalmartHomePageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/models/WalmartHomePageModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/models/WalmartUserAccountPageModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/HomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/walmart/automation/runner/WalmartRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/walmart/automation/runner/WalmartRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/CommonSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartHomePageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartHomePageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartUserAccountPageSteps.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/homePageFunctionality.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/homePageFunctionality.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/userAccountFunctionality.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/userAccountHomePageFunctionality.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/walmart/automation/framework/hooks/BaseSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/walmart/automation/framework/hooks/BaseSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/walmart/automation/framework/hooks/BeforeAfterHook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/walmart/automation/framework/hooks/BeforeAfterHook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/walmart/automation/framework/models/WalmartUserAccountPageModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-html-report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-html-report/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-test-report/cucumber-pretty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-test-report/cucumber-pretty.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/walmart/automation/runner/WalmartRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/walmart/automation/runner/WalmartRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/walmart/automation/steps/CommonSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/walmart/automation/steps/CommonSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/walmart/automation/steps/WalmartHomePageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/walmart/automation/steps/WalmartHomePageSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/walmart/automation/steps/WalmartUserAccountPageSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/homePageFunctionality.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/homePageFunctionality.feature" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,13 +23,13 @@
       <file leaf-file-name="WalmartHomePageModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/models/WalmartHomePageModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
+            <state relative-caret-position="663">
               <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="30" />
               <folding>
                 <element signature="e#1482#1483#0" expanded="true" />
                 <element signature="e#1533#1534#0" expanded="true" />
                 <element signature="e#1569#1570#0" expanded="true" />
-                <element signature="e#1599#1600#0" expanded="true" />
+                <element signature="e#1600#1601#0" expanded="true" />
                 <element signature="e#1646#1647#0" expanded="true" />
                 <element signature="e#1685#1686#0" expanded="true" />
                 <element signature="e#1736#1737#0" expanded="true" />
@@ -76,12 +58,10 @@
       <file leaf-file-name="ApplicationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/ApplicationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+            <state relative-caret-position="272">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,7 +70,7 @@
       <file leaf-file-name="BaseSteps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BaseSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="238">
               <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
             </state>
           </provider>
@@ -99,8 +79,8 @@
       <file leaf-file-name="homePageFunctionality.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/homePageFunctionality.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="85">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -108,8 +88,33 @@
       <file leaf-file-name="WalmartHomePageSteps.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartHomePageSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="58" column="41" lean-forward="true" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+            <state relative-caret-position="136">
+              <caret line="61" column="66" selection-start-line="61" selection-start-column="66" selection-end-line="61" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Delay.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/utils/Delay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Waits.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/utils/Waits.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#180#181#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#288#289#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,12 +122,10 @@
       <file leaf-file-name="HomePageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/HomePageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="1836">
+              <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#359#360#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,10 +168,8 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/addToCartFunctionality.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/userAccountFunctionality.feature" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/homePageFunctionality.feature" />
         <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BeforeAfterHook.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/CommonSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/walmart/automation/runner/WalmartRunner.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartUserAccountPageSteps.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/models/WalmartUserAccountPageModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/UserAccountHomePageController.java" />
@@ -176,8 +177,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BaseSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartUserAccountHomePageSteps.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/models/WalmartHomePageModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/ApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/homePageFunctionality.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/com/walmart/automation/runner/WalmartRunner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/HomePageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/utils/Waits.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/ApplicationController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartHomePageSteps.java" />
       </list>
     </option>
@@ -203,7 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,17 +345,11 @@
               <item name="walmartProject" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="walmartProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="walmartProject" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-html-report" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -378,7 +376,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber java.Feature: homePageFunctionality">
+  <component name="RunManager" selected="JUnit.WalmartRunner">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -393,32 +391,32 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Feature: userAccountFunctionality" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="walmartProject" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="Scenario: 1. User account button's options are working properly (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="walmartProject" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^1\. User account button\'s options are working properly$&quot;" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration name="Scenario: 1. User account button's options are working properly (2)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="walmartProject" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^1\. User account button\'s options are working properly$&quot;" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Scenario: 1.Verify navigation menu button is working" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="walmartProject" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^1\.Verify navigation menu button is working$&quot;" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Scenario: 2.Verify GlobalHeaderSparkMenu-optionalTopLinks are working properly" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="walmartProject" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^2\.Verify GlobalHeaderSparkMenu\-optionalTopLinks are working properly$&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -488,19 +486,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.WalmartRunner" />
-      <item itemvalue="Cucumber java.Feature: userAccountFunctionality" />
-      <item itemvalue="Cucumber java.Scenario: 1. User account button's options are working properly (1)" />
       <item itemvalue="Cucumber java.Scenario: 1. User account button's options are working properly (2)" />
       <item itemvalue="Cucumber java.Feature: homePageFunctionality" />
+      <item itemvalue="Cucumber java.Scenario: 1.Verify navigation menu button is working" />
+      <item itemvalue="Cucumber java.Scenario: 2.Verify GlobalHeaderSparkMenu-optionalTopLinks are working properly" />
+      <item itemvalue="JUnit.WalmartRunner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WalmartRunner" />
+        <item itemvalue="Cucumber java.Scenario: 2.Verify GlobalHeaderSparkMenu-optionalTopLinks are working properly" />
+        <item itemvalue="Cucumber java.Scenario: 1.Verify navigation menu button is working" />
         <item itemvalue="Cucumber java.Feature: homePageFunctionality" />
         <item itemvalue="Cucumber java.Scenario: 1. User account button's options are working properly (2)" />
-        <item itemvalue="Cucumber java.Scenario: 1. User account button's options are working properly (1)" />
-        <item itemvalue="JUnit.WalmartRunner" />
-        <item itemvalue="Cucumber java.Feature: userAccountFunctionality" />
       </list>
     </recent_temporary>
   </component>
@@ -526,15 +524,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Scenario__1__User_account_button's_options_are_working_properly_(1) - 2018.06.10 at 23h 24m 29s.xml">
-      <configuration name="Scenario: 1. User account button's options are working properly (1)" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Scenario__1__User_account_button's_options_are_working_properly_(1) - 2018.06.10 at 23h 25m 36s.xml">
-      <configuration name="Scenario: 1. User account button's options are working properly (1)" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Scenario__1__User_account_button's_options_are_working_properly_(1) - 2018.06.11 at 02h 28m 31s.xml">
-      <configuration name="Scenario: 1. User account button's options are working properly (1)" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
     <history-entry file="Scenario__1__User_account_button's_options_are_working_properly_(1) - 2018.06.11 at 02h 29m 36s.xml">
       <configuration name="Scenario: 1. User account button's options are working properly (1)" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
@@ -556,10 +545,18 @@
     <history-entry file="Feature__homePageFunctionality - 2018.06.11 at 04h 29m 07s.xml">
       <configuration name="Feature: homePageFunctionality" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
+    <history-entry file="Scenario__1_Verify_navigation_menu_button_is_working - 2018.06.12 at 19h 59m 33s.xml">
+      <configuration name="Scenario: 1.Verify navigation menu button is working" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__2_Verify_GlobalHeaderSparkMenu-optionalTopLinks_are_working_properly - 2018.06.12 at 20h 08m 01s.xml">
+      <configuration name="Scenario: 2.Verify GlobalHeaderSparkMenu-optionalTopLinks are working properly" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+    <history-entry file="WalmartRunner - 2018.06.12 at 20h 13m 36s.xml">
+      <configuration name="WalmartRunner" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -570,11 +567,11 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3828125" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23958333" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22291666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21388888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -602,20 +599,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/homePageFunctionality.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/walmart/automation/runner/WalmartRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,9 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,40 +832,14 @@
     <entry file="file://$PROJECT_DIR$/target/cucumber-test-report/cucumber-pretty.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/walmart/automation/runner/WalmartRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BeforeAfterHook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
           <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/utils/Delay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/Utils.java" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/userAccountHomePageFunctionality.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -893,12 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,22 +864,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/homePageFunctionality.feature">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/UserAccountHomePageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="238">
+          <caret line="25" column="67" lean-forward="true" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/models/WalmartHomePageModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
+        <state relative-caret-position="663">
           <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="30" />
           <folding>
             <element signature="e#1482#1483#0" expanded="true" />
             <element signature="e#1533#1534#0" expanded="true" />
             <element signature="e#1569#1570#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
+            <element signature="e#1600#1601#0" expanded="true" />
             <element signature="e#1646#1647#0" expanded="true" />
             <element signature="e#1685#1686#0" expanded="true" />
             <element signature="e#1736#1737#0" expanded="true" />
@@ -952,51 +904,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/UserAccountHomePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="67" lean-forward="true" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/hooks/BaseSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="238">
           <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/ApplicationController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/walmart/automation/runner/WalmartRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="24" column="75" lean-forward="true" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/homePageFunctionality.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/utils/Delay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/HomePageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="1836">
+          <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/utils/Waits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/walmart/automation/framework/controller/ApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/walmart/automation/steps/WalmartHomePageSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="58" column="41" lean-forward="true" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+        <state relative-caret-position="136">
+          <caret line="61" column="66" selection-start-line="61" selection-start-column="66" selection-end-line="61" selection-end-column="66" />
         </state>
       </provider>
     </entry>

@@ -31,86 +31,20 @@ public class WalmartHomePageSteps extends BaseSteps {
     @Then("^GlobalHeaderSparkMenu-optionalTopLinks are going to show this options$")
     public void globalheadersparkmenu_optionalTopLinks_are_going_to_show_this_options(DataTable dataTable){
         List<List<String>> data = dataTable.raw();
-        String[] expectedItems = dataTableToArray(data);
-        verifyDropDownOptions(expectedItems);
+        String[] expectedItems = getApplicationController().getHomePageController().datatableToArray(data);
+        getApplicationController().getHomePageController().verifyOptions(expectedItems);
     }
 
-    //method for puting datatablel products into an array
-    public String[] dataTableToArray(List<List<String>> data){
-        driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-        String[] expectedItems = new String[data.get(0).size()];
-        int count = 1;
-        for(int i=0; i<data.size(); i++){
-            for(int j=0; j<data.get(i).size(); j++){
-                String text = data.get(i).get(j);
-                System.out.println("Expected Item #" + count + " -- " + text);
-                expectedItems[j] = text;
-                count++;
-            }
-        }
-        return expectedItems;
-    }
-    //Verifing datatable's product with actual product
-    public void verifyDropDownOptions(String[] expectedMenuList){
-        List<WebElement>options = driver.findElements(WalmartHomePageModel.getTopLinks());
-        String[] actualItemTexts = new String[options.size()];
-        int count = 0;
-        for (WebElement item : options) {
-            String text = item.getText();
-            System.out.println(text);
-            actualItemTexts[count] = text;
-            count++;
-        }
-        Assert.assertEquals(expectedMenuList,actualItemTexts);
-    }
 //    verifing GlobalHeaderSparkMenu-optionalTopLinks are working properly
     @Then("^GlobalHeaderSparkMenu-optionalTopLinks are working properly$")
     public void globalheadersparkmenu_optionalTopLinks_are_working_properly() throws Throwable {
-        List <WebElement> totalLinks = driver.findElements(WalmartHomePageModel.getOptionalCampaignLinks());
-//        totalLinks.addAll(driver.findElements(By.tagName("img")));
-        System.out.println("total number of links and images ----- " + totalLinks.size());
-
-        List <WebElement> activeLinks = new ArrayList<WebElement>();
-
-        for(int i = 0; i < totalLinks.size(); i++){
-            if(totalLinks.get(i).getAttribute("href") != null){
-                activeLinks.add(totalLinks.get(i));
-            }
-        }
-        System.out.println("total number of active links ------ " + activeLinks.size());
-
-        for(int j = 0; j < activeLinks.size(); j++){
-            HttpURLConnection connections =(HttpURLConnection)new URL(activeLinks.get(j).getAttribute("href")).openConnection();
-            connections.connect();
-            String responseMessage = connections.getResponseMessage();
-            connections.disconnect();
-            System.out.println(activeLinks.get(j).getAttribute("href")+"----->"+responseMessage);
-        }
+        getApplicationController().getHomePageController().optionalTopLinksCheck();
     }
 
 //    verifing GlobalHeaderSparkMenu-optionalCampaignLinks are working properly
     @Then("^GlobalHeaderSparkMenu-optionalCampaignLinks are working properly$")
     public void globalheadersparkmenu_optionalCampaignLinks_are_working_properly() throws Throwable{
-        List <WebElement> totalLinks = driver.findElements(WalmartHomePageModel.getOptionalCampaignLinks());
-        //totalLinks.addAll(driver.findElements(By.tagName("img")));
-        System.out.println("total number of links and images ----- " + totalLinks.size());
-
-        List <String> activeLinks = new ArrayList<String>();
-
-        for(int i = 0; i < totalLinks.size(); i++){
-            if(totalLinks.get(i).getAttribute("href") != null){
-                activeLinks.add(totalLinks.get(i).getAttribute("href"));
-            }
-        }
-        System.out.println("total number of active links ------ " + activeLinks.size());
-
-        for(int j = 0; j < activeLinks.size(); j++){
-            HttpURLConnection connections =(HttpURLConnection)new URL(activeLinks.get(j)).openConnection();
-            connections.connect();
-            String responseMessage = connections.getResponseMessage();
-            connections.disconnect();
-            System.out.println(activeLinks.get(j)+"----->"+responseMessage);
-        }
+        getApplicationController().getHomePageController().optionalCampaignLinksCheck();
     }
 
 ////    verifing GlobalHeaderDepartmentsMenu options are working properly
@@ -124,9 +58,8 @@ public class WalmartHomePageSteps extends BaseSteps {
 //    verify grocery button is working properly
     @When("^User click on grocery button$")
     public void user_click_on_grocery_button(){
-        WebElement groceryButton = driver.findElement(WalmartHomePageModel.getHomePageGroceryButton());
-        groceryButton.click();
-        driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+        getApplicationController().getHomePageController().groceryButtonClick();
+        getApplicationController().getWaits().impliciteWait(5000);
     }
 
     @Then("^\"([^\"]*)\" is going to display$")

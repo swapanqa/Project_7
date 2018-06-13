@@ -10,10 +10,12 @@ Feature: Walmart home page functionality
      Then GlobalHeaderSparkMenu-optionalTopLinks are going to show this options
      | Free Grocery Pickup| Reorder Items| Track Orders|
 
+    @links
    Scenario: 2.Verify GlobalHeaderSparkMenu-optionalTopLinks are working properly
      When User click on navigation menu button
      Then GlobalHeaderSparkMenu-optionalTopLinks are working properly
 
+    @links
    Scenario: 3.Verify GlobalHeaderSparkMenu-optionalCampaignLinks are working properly
      When User click on navigation menu button
      Then GlobalHeaderSparkMenu-optionalCampaignLinks are working properly
