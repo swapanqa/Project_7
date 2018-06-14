@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
 //        tags = "@links",
 //        dryRun = true,
 
-//        features = "src/test/resources/features/signUpPageFunctionality.feature",
-        features = "src/test/resources/features/",
+        features = "src/test/resources/features/homePageFunctionality.feature",
+//        features = "src/test/resources/features/",
 
         glue = {"com.walmart.automation.steps",
                 "com.walmart.automation.framework.hooks"},

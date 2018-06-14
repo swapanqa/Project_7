@@ -18,7 +18,7 @@ import java.net.URL;
 public class DriverFactory {
     private static DriverFactory instance = null;
 
-    public static final String USERNAME = "iftekharivaan2";
+    public static final String USERNAME = "Nabiu Hossain";
     public static final String AUTOMATE_KEY = "T8Qe6aWxTxjQRFGeztFV";
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
