@@ -8,6 +8,9 @@ public class ApplicationController{
     protected Waits waits = null;
     protected UserAccountHomePageController userAccountHomePageController = null;
     protected HomePageController homePageController = null;
+    protected LoginPageController loginPageController = null;
+    protected SearchBoxController searchBoxController = null;
+    protected SignUpPageController signUpPageController = null;
 
     public ApplicationController(WebDriver driver){
         this.driver = driver;
@@ -32,5 +35,26 @@ public class ApplicationController{
             homePageController = new HomePageController(driver);
         }
         return homePageController;
+    }
+
+    public LoginPageController getLoginPageController() {
+        if(loginPageController == null){
+            loginPageController = new LoginPageController(driver);
+        }
+        return loginPageController;
+    }
+
+    public SearchBoxController getSearcBoxController(){
+        if(searchBoxController == null){
+            searchBoxController = new SearchBoxController(driver);
+        }
+        return searchBoxController;
+    }
+
+    public SignUpPageController getSignUpPageController(){
+        if(signUpPageController == null){
+            signUpPageController = new SignUpPageController(driver);
+        }
+        return signUpPageController;
     }
 }

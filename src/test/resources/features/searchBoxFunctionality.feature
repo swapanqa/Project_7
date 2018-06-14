@@ -5,7 +5,7 @@ Feature: Walmart search box functionality
 
   Scenario: 1.Valid search in the search box
     When User enter in the search box "Nike Benassi Solarsoft Slide"
-    Then Searched product page should dispaly
+    Then Searched product page should dispaly "Nike Benassi Solarsoft Slide - Walmart.com"
 
   Scenario: 2.Invalid search in the search box
     When User enter an invalid product in the search box "eerrtt"
@@ -24,4 +24,4 @@ Feature: Walmart search box functionality
     When User click on search box drop down button
     And Select option"baby"
     And User enter in the search box "socks"
-    Then Page going to show 34 products
+    Then Page going to show 36 products

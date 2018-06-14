@@ -113,4 +113,73 @@ public class HomePageController {
         WebElement groceryButton = driver.findElement(WalmartHomePageModel.getHomePageGroceryButton());
         groceryButton.click();
     }
+
+    public void pageTitleAssertion(String expected){
+        String actual = driver.getTitle();
+        System.out.println("Actual page title is ----->" + actual);
+        System.out.println("Expected page title is ----->" + expected);
+        Assert.assertEquals(expected,actual);
+    }
+
+    public void accountButtonClick(){
+        WebElement accountButton = driver.findElement(WalmartHomePageModel.getHomePageAccountButton());
+        accountButton.click();
+    }
+
+    public void accountButtonAssertion(String expected){
+        String actual = driver.findElement(WalmartHomePageModel.getHomePageAccountButtonAssert()).getText();
+        System.out.println("actual is ----->" + "" + actual);
+        System.out.println("expected is ----->" + "" + expected);
+        Assert.assertEquals(expected,actual);
+    }
+
+    public void storeLocationButtonClick(){
+        WebElement locationButton =  driver.findElement(WalmartHomePageModel.getHomePageLocationButton());
+        locationButton.click();
+    }
+
+    public void storeLocationButtonAssertion(String expected){
+        String actual = driver.findElement(WalmartHomePageModel.getHomePageLocationButtonAssert()).getText();
+        System.out.println("actual is ----->" + "" + actual);
+        System.out.println("expected is ----->" + "" + expected);
+        Assert.assertEquals(expected,actual);
+    }
+
+    public void cartButtonClick(){
+        WebElement cartButton = driver.findElement(WalmartHomePageModel.getHomePageCartButton());
+        cartButton.click();
+    }
+
+    public void brokenLinksAndImagesTest(){
+        List <WebElement> totalLinksAndImages = driver.findElements(WalmartHomePageModel.getHomePageLinks());
+        totalLinksAndImages.addAll(driver.findElements(WalmartHomePageModel.getHomePageImages()));
+        System.out.println("total number of links and images are ----->" + totalLinksAndImages.size());
+
+        List <String> activeLinks = new ArrayList<String>();
+
+        for(int i = 0; i < totalLinksAndImages.size(); i++){
+            if(totalLinksAndImages.get(i).getAttribute("href") != null){
+                activeLinks.add(totalLinksAndImages.get(i).getAttribute("href"));
+            }
+        }
+        System.out.println("total number of active links are ----->" + activeLinks.size());
+
+        int count = 1;
+        for(int j = 0; j < activeLinks.size(); j++){
+            String url = activeLinks.get(j);
+            try {
+                HttpURLConnection connection = (HttpURLConnection)new URL(activeLinks.get(j)).openConnection();
+                connection.connect();
+                String massage = connection.getResponseMessage();
+                connection.disconnect();
+                System.out.println(count + "--->" + url + "----->" + massage);
+                count++;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void deleteAllCookies(){
+        driver.manage().deleteAllCookies();
+    }
 }

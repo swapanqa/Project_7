@@ -21,7 +21,7 @@ public class WalmartHomePageSteps extends BaseSteps {
 
     @Given("^Not a valideted home page$")
     public void not_a_valideted_home_page() {
-        driver.manage().deleteAllCookies();
+        getApplicationController().getHomePageController().deleteAllCookies();
     }
     @When("^User click on navigation menu button$")
     public void user_click_on_navigation_menu_button(){
@@ -47,14 +47,6 @@ public class WalmartHomePageSteps extends BaseSteps {
         getApplicationController().getHomePageController().optionalCampaignLinksCheck();
     }
 
-////    verifing GlobalHeaderDepartmentsMenu options are working properly
-//    @Then("^GlobalHeaderDepartmentsMenu options are working properly$")
-//    public void globalheaderdepartmentsmenu_options_are_working_properly() throws Throwable {
-//        driver.findElement(By.xpath("//div[@class='GlobalHeaderDepartmentsMenu']/button[@data-automation-id='GlobalHeaderDepartmentsMenu-deptButtonMobile-0']")).click();
-////        int totalButtonOptions = buttonOptions.size();
-////        System.out.println("total number of option is ----->" + totalButtonOptions);
-//    }
-
 //    verify grocery button is working properly
     @When("^User click on grocery button$")
     public void user_click_on_grocery_button(){
@@ -64,49 +56,40 @@ public class WalmartHomePageSteps extends BaseSteps {
 
     @Then("^\"([^\"]*)\" is going to display$")
     public void is_going_to_display(String expected){
-        String actual = driver.getTitle();
-        Assert.assertEquals(expected,actual);
+        getApplicationController().getHomePageController().pageTitleAssertion(expected);
     }
 
 //    verify account button is working properly
     @When("^User click on account button$")
     public void user_click_on_account_button() throws Throwable {
-        WebElement accountButton = driver.findElement(WalmartHomePageModel.getHomePageAccountButton());
-        accountButton.click();
+        getApplicationController().getHomePageController().accountButtonClick();
     }
 
     @Then("^\"([^\"]*)\" dropdown is going to display$")
-    public void dropdown_is_going_to_display(String expected) throws Throwable {
-        String actual = driver.findElement(WalmartHomePageModel.getHomePageAccountButtonAssert()).getText();
-        System.out.println("actual is ----->" + "" + actual);
-        Assert.assertEquals(expected,actual);
+    public void account_dropdown_is_going_to_display(String expected){
+        getApplicationController().getHomePageController().accountButtonAssertion(expected);
     }
 
 //    verify store location button is working properly
     @When("^User click on store location button$")
-    public void user_click_on_store_location_button() throws Throwable {
-        WebElement locationButton =  driver.findElement(WalmartHomePageModel.getHomePageLocationButton());
-        locationButton.click();
+    public void user_click_on_store_location_button(){
+        getApplicationController().getHomePageController().storeLocationButtonClick();
     }
 
     @Then("^\"([^\"]*)\" dropdown is going to show$")
-    public void dropdown_is_going_to_show(String expected) throws Throwable {
-        String actual = driver.findElement(WalmartHomePageModel.getHomePageLocationButtonAssert()).getText();
-        System.out.println("actual is ----->" + "" + actual);
-        Assert.assertEquals(expected,actual);
+    public void location_dropdown_is_going_to_show(String expected) {
+        getApplicationController().getHomePageController().storeLocationButtonAssertion(expected);
     }
 
 //    verify cart button is working properly
     @When("^User click on cart button$")
-    public void user_click_on_cart_button() throws Throwable {
-        WebElement cartButton = driver.findElement(WalmartHomePageModel.getHomePageCartButton());
-        cartButton.click();
+    public void user_click_on_cart_button(){
+        getApplicationController().getHomePageController().cartButtonClick();
     }
 
     @Then("^\"([^\"]*)\" page is going to show$")
-    public void page_is_going_to_show(String expected) throws Throwable {
-        String actual = driver.getTitle();
-        Assert.assertEquals(expected,actual);
+    public void page_is_going_to_show(String expected){
+        getApplicationController().getHomePageController().pageTitleAssertion(expected);
     }
 
 //    verify all images and links are not broken
@@ -117,33 +100,7 @@ public class WalmartHomePageSteps extends BaseSteps {
 
     @Then("^All link and images are not broken$")
     public void all_link_and_images_are_not_broken(){
-        List <WebElement> totalLinksAndImages = driver.findElements(WalmartHomePageModel.getHomePageLinks());
-        totalLinksAndImages.addAll(driver.findElements(WalmartHomePageModel.getHomePageImages()));
-        System.out.println("total number of links and images are ----->" + totalLinksAndImages.size());
-
-        List <String> activeLinks = new ArrayList<String>();
-
-        for(int i = 0; i < totalLinksAndImages.size(); i++){
-            if(totalLinksAndImages.get(i).getAttribute("href") != null){
-                activeLinks.add(totalLinksAndImages.get(i).getAttribute("href"));
-            }
-        }
-        System.out.println("total number of active links are ----->" + activeLinks.size());
-
-        int count = 1;
-        for(int j = 0; j < activeLinks.size(); j++){
-            String url = activeLinks.get(j);
-            try {
-                HttpURLConnection connection = (HttpURLConnection)new URL(activeLinks.get(j)).openConnection();
-                connection.connect();
-                String massage = connection.getResponseMessage();
-                connection.disconnect();
-                System.out.println(count + "--->" + url + "----->" + massage);
-                count++;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        getApplicationController().getHomePageController().brokenLinksAndImagesTest();
     }
 
 }

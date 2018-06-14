@@ -8,7 +8,7 @@ Feature: User account functionality
     When User write email "demo.auser01@gmail.com"
     And User write password "demowalmart"
     And User click on signin button
-    Then "Login" pagetitle should display
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display
 
    Scenario: 1. User account button's options are working properly
      When User Click on loged in user account button

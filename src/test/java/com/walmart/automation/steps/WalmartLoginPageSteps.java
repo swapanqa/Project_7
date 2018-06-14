@@ -13,49 +13,40 @@ public class WalmartLoginPageSteps extends BaseSteps {
 
     @When("^Click on signin option$")
     public void click_on_signin_option(){
-        WebElement homePageSigninOptionElement = driver.findElement(WalmartLoginPageModel.homePageSigninButton);
-        homePageSigninOptionElement.click();
+        getApplicationController().getLoginPageController().SigninOptionClick();
     }
 
     @Then("^Login \"([^\"]*)\" page should display$")
     public void login_page_should_display(String expected){
-        String actual = driver.getTitle();
-        Assert.assertEquals(expected,actual);
+        getApplicationController().getLoginPageController().pageTitleAssertion(expected);
     }
 
     @When("^User write email \"([^\"]*)\"$")
-    public void user_write_email(String email) throws Throwable {
-        WebElement emailElement = driver.findElement(WalmartLoginPageModel.emailTextBox);
-        emailElement.sendKeys(email);
+    public void user_write_email(String email){
+        getApplicationController().getLoginPageController().emailText(email);
     }
 
     @When("^User write password \"([^\"]*)\"$")
     public void user_write_password(String password){
-        WebElement passwordElement = driver.findElement(WalmartLoginPageModel.passwordTextBox);
-        passwordElement.sendKeys(password);
+        getApplicationController().getLoginPageController().passwordText(password);
     }
 
     @When("^User click on signin button$")
     public void user_click_on_signin_button(){
-        WebElement loginPageSigninButton = driver.findElement(WalmartLoginPageModel.loginPageSigninButton);
-        loginPageSigninButton.click();
+        getApplicationController().getLoginPageController().signinButtonClick();
     }
 
 //    login success assertion
     @Then("^\"([^\"]*)\" pagetitle should display$")
     public void page_should_display(String expected){
-        driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-        String actual = driver.getTitle();
-        System.out.println("actual is----->" + actual);
-        Assert.assertEquals(expected,actual);
+        getDelay().delayFor(5000);
+        getApplicationController().getLoginPageController().pageTitleAssertion(expected);
     }
 
 //    login not successful assertion
     @Then("^\"([^\"]*)\"this error massage should display$")
     public void this_error_massage_should_display(String expected){
-        driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
-        String actual = driver.findElement(WalmartLoginPageModel.loginNotSuccessfulAssertion).getText();
-        System.out.println("actual is ----->" + actual);
-        Assert.assertEquals(expected,actual);
+        getDelay().delayFor(3000);
+        getApplicationController().getLoginPageController().loginErrorMassageAssertion(expected);
     }
 }

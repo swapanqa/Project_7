@@ -1,21 +1,410 @@
+Feature: Add to cart functionality
+
+  Background: Given Not a valideted home page                              # addToCartFunctionality.feature:2
+    When Open browser and start application                                # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly                                   # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button                                      # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option                                             # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display                                 # WalmartLoginPageSteps.login_page_should_display(String)
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Scenario: 1.User account button all the options # addToCartFunctionality.feature:13
 Feature: Walmart home page functionality
 
-  Background:                               # src/test/resources/features/homePageFunctionality.feature:2
+  Background:                               # homePageFunctionality.feature:2
+    Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  @reportTest
+  Scenario: 1.Verify navigation menu button is working                         # homePageFunctionality.feature:8
+    When User click on navigation menu button                                  # WalmartHomePageSteps.user_click_on_navigation_menu_button()
+    Then GlobalHeaderSparkMenu-optionalTopLinks are going to show this options # WalmartHomePageSteps.globalheadersparkmenu_optionalTopLinks_are_going_to_show_this_options(DataTable)
+
+  Background:                               # homePageFunctionality.feature:2
     Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
     When Open browser and start application # CommonSteps.open_browser_and_start_application()
     Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
 
   @links
-  Scenario: 2.Verify GlobalHeaderSparkMenu-optionalTopLinks are working properly # src/test/resources/features/homePageFunctionality.feature:14
+  Scenario: 2.Verify GlobalHeaderSparkMenu-optionalTopLinks are working properly # homePageFunctionality.feature:14
     When User click on navigation menu button                                    # WalmartHomePageSteps.user_click_on_navigation_menu_button()
     Then GlobalHeaderSparkMenu-optionalTopLinks are working properly             # WalmartHomePageSteps.globalheadersparkmenu_optionalTopLinks_are_working_properly()
 
-  Background:                               # src/test/resources/features/homePageFunctionality.feature:2
+  Background:                               # homePageFunctionality.feature:2
     Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
     When Open browser and start application # CommonSteps.open_browser_and_start_application()
     Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
 
   @links
-  Scenario: 3.Verify GlobalHeaderSparkMenu-optionalCampaignLinks are working properly # src/test/resources/features/homePageFunctionality.feature:19
+  Scenario: 3.Verify GlobalHeaderSparkMenu-optionalCampaignLinks are working properly # homePageFunctionality.feature:19
     When User click on navigation menu button                                         # WalmartHomePageSteps.user_click_on_navigation_menu_button()
     Then GlobalHeaderSparkMenu-optionalCampaignLinks are working properly             # WalmartHomePageSteps.globalheadersparkmenu_optionalCampaignLinks_are_working_properly()
+
+  Background:                               # homePageFunctionality.feature:2
+    Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  #   Scenario: 4.Verify GlobalHeaderDepartmentsMenus are working properly
+  #    When User click on navigation menu button
+  #    Then GlobalHeaderDepartmentsMenu options are working properly
+  Scenario: 5.Verify grocery button is navigate into a expected page # homePageFunctionality.feature:27
+    When User click on grocery button                                # WalmartHomePageSteps.user_click_on_grocery_button()
+    Then "Walmart Grocery - Home" is going to display                # WalmartHomePageSteps.is_going_to_display(String)
+
+  Background:                               # homePageFunctionality.feature:2
+    Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  #   @smoke
+  Scenario: 6.Verify account button is working  # homePageFunctionality.feature:32
+    When User click on account button           # WalmartHomePageSteps.user_click_on_account_button()
+    Then "Account" dropdown is going to display # WalmartHomePageSteps.account_dropdown_is_going_to_display(String)
+
+  Background:                               # homePageFunctionality.feature:2
+    Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 7.Verify account button is working # homePageFunctionality.feature:36
+    When User click on store location button   # WalmartHomePageSteps.user_click_on_store_location_button()
+    Then "Location" dropdown is going to show  # WalmartHomePageSteps.location_dropdown_is_going_to_show(String)
+
+  Background:                               # homePageFunctionality.feature:2
+    Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 7.Verify cart button is working # homePageFunctionality.feature:40
+    When User click on cart button          # WalmartHomePageSteps.user_click_on_cart_button()
+    Then "Cart" page is going to show       # WalmartHomePageSteps.page_is_going_to_show(String)
+
+  Background:                               # homePageFunctionality.feature:2
+    Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 8.Verifying all links and images are not broken # homePageFunctionality.feature:44
+    When User is in homepage                                # WalmartHomePageSteps.user_is_in_homepage()
+    Then All link and images are not broken                 # WalmartHomePageSteps.all_link_and_images_are_not_broken()
+Feature: Walmart login page funtionalities
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario: 1.User put all the valid informations                          # loginPageFunctionality.feature:9
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:15
+    When User write email "<Email>"
+    And User write password "<Password>"
+    And User click on signin button
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display
+
+    Examples: 
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:22
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:23
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:24
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:25
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:26
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:27
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:28
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 2. User put valid email and valid password             # loginPageFunctionality.feature:29
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:31
+    When User write email "demo.auser@gmail.com"
+    And User write password "<Password>"
+
+    #    And User click on signin button
+    #    Then "Your password and email do not match. Please try again or reset your password. "this error massage should display
+    Examples: 
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:38
+    When User write email "demo.auser@gmail.com"                 # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "123e"                               # WalmartLoginPageSteps.user_write_password(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:39
+    When User write email "demo.auser@gmail.com"                 # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "123e1"                              # WalmartLoginPageSteps.user_write_password(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:40
+    When User write email "demo.auser@gmail.com"                 # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "1g3e"                               # WalmartLoginPageSteps.user_write_password(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:41
+    When User write email "demo.auser@gmail.com"                 # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "12ue1"                              # WalmartLoginPageSteps.user_write_password(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:42
+    When User write email "demo.auser@gmail.com"                 # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "123e"                               # WalmartLoginPageSteps.user_write_password(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:43
+    When User write email "demo.auser@gmail.com"                 # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "123e1"                              # WalmartLoginPageSteps.user_write_password(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:44
+    When User write email "demo.auser@gmail.com"                 # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "1g3e"                               # WalmartLoginPageSteps.user_write_password(String)
+
+  Background: Not a valideted home page     # loginPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option              # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display  # WalmartLoginPageSteps.login_page_should_display(String)
+
+  Scenario Outline: 3. User put valid email and invalid password # loginPageFunctionality.feature:45
+    When User write email "demo.auser@gmail.com"                 # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "12ue1"                              # WalmartLoginPageSteps.user_write_password(String)
+Feature: Walmart search box functionality
+
+  Background: Not a valideted search box    # searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 1.Valid search in the search box                                               # searchBoxFunctionality.feature:6
+    When User enter in the search box "Nike Benassi Solarsoft Slide"                       # WalmartSearchBoxSteps.user_enter_in_the_search_box(String)
+    Then Searched product page should dispaly "Nike Benassi Solarsoft Slide - Walmart.com" # WalmartSearchBoxSteps.searched_product_page_should_dispaly(String)
+
+  Background: Not a valideted search box    # searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 2.Invalid search in the search box                    # searchBoxFunctionality.feature:10
+    When User enter an invalid product in the search box "eerrtt" # WalmartSearchBoxSteps.user_enter_an_invalid_product_in_the_search_box(String)
+    Then No product match massage should display                  # WalmartSearchBoxSteps.no_product_match_massage_should_display()
+
+  Background: Not a valideted search box    # searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 3.Count search box dropdown list       # searchBoxFunctionality.feature:14
+    When User click on search box drop down button # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
+    Then List going to show 26 options             # WalmartSearchBoxSteps.list_going_to_show_options(int)
+
+  Background: Not a valideted search box    # searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 4.Verify all the options are shown in the list # searchBoxFunctionality.feature:18
+    When User click on search box drop down button         # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
+    Then List going to show this options                   # WalmartSearchBoxSteps.list_going_to_show_this_options(DataTable)
+
+  Background: Not a valideted search box    # searchBoxFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+
+  Scenario: 5.Verify advance search in the search box # searchBoxFunctionality.feature:23
+    When User click on search box drop down button    # WalmartSearchBoxSteps.user_click_on_search_box_drop_down_button()
+    And Select option"baby"                           # WalmartSearchBoxSteps.select_option(String)
+    And User enter in the search box "socks"          # WalmartSearchBoxSteps.user_enter_in_the_search_box(String)
+    Then Page going to show 36 products               # WalmartSearchBoxSteps.page_going_to_show_products(int)
+Feature: Walmart signup page funtionalities
+
+  Background: Not a valideted home page     # signUpPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on create account             # WalmartSignUpPageSteps.click_on_create_account()
+    Then SignUp "Login" page should display # WalmartSignUpPageSteps.signup_page_should_display(String)
+
+  Scenario: 1.Create an account with invalid email                                  # signUpPageFunctionality.feature:9
+    When User put first name"firstName"                                             # WalmartSignUpPageSteps.user_put_first_name(String)
+    And User put last name "lastName"                                               # WalmartSignUpPageSteps.user_put_last_name(String)
+    And User put email "demo.user01@gmail"                                          # WalmartSignUpPageSteps.user_put_email(String)
+    And User put password "123456"                                                  # WalmartSignUpPageSteps.user_put_password(String)
+    #      And User uncheck remember me check box
+    #      And User uncheck auto email check box
+    And User click on create account button                                         # WalmartSignUpPageSteps.user_click_on_create_account_button()
+    Then invalid email massage "Please enter a valid email address." should display # WalmartSignUpPageSteps.invalid_email_massage_should_display(String)
+
+  Background: Not a valideted home page     # signUpPageFunctionality.feature:2
+    When Open browser and start application # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly    # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button       # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on create account             # WalmartSignUpPageSteps.click_on_create_account()
+    Then SignUp "Login" page should display # WalmartSignUpPageSteps.signup_page_should_display(String)
+
+  Scenario: 1.Create an account with invalid email                                           # signUpPageFunctionality.feature:19
+    When User put first name"firstName"                                                      # WalmartSignUpPageSteps.user_put_first_name(String)
+    And User put last name "lastName"                                                        # WalmartSignUpPageSteps.user_put_last_name(String)
+    And User put email "demo.auser01@gmail"                                                  # WalmartSignUpPageSteps.user_put_email(String)
+    And User put password "12345"                                                            # WalmartSignUpPageSteps.user_put_password(String)
+    #      And User uncheck remember me check box
+    #      And User uncheck auto email check box
+    And User click on create account button                                                  # WalmartSignUpPageSteps.user_click_on_create_account_button()
+    Then invalid password massage "Must contain between 6 and 12 characters." should display # WalmartSignUpPageSteps.invalid_password_massage_should_display(String)
+Feature: User account functionality
+
+  Background: Given Not a valideted home page                              # userAccountHomePageFunctionality.feature:2
+    When Open browser and start application                                # CommonSteps.open_browser_and_start_application()
+    Then Walmart homepage shoule dispaly                                   # CommonSteps.walmart_homepage_shoule_dispaly()
+    When User click on account button                                      # WalmartHomePageSteps.user_click_on_account_button()
+    And Click on signin option                                             # WalmartLoginPageSteps.click_on_signin_option()
+    Then Login "Login" page should display                                 # WalmartLoginPageSteps.login_page_should_display(String)
+    When User write email "demo.auser01@gmail.com"                         # WalmartLoginPageSteps.user_write_email(String)
+    And User write password "demowalmart"                                  # WalmartLoginPageSteps.user_write_password(String)
+    And User click on signin button                                        # WalmartLoginPageSteps.user_click_on_signin_button()
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display # WalmartLoginPageSteps.page_should_display(String)
+
+  Scenario: 1. User account button's options are working properly                # userAccountHomePageFunctionality.feature:13
+    When User Click on loged in user account button                              # WalmartUserAccountHomePageSteps.user_Click_on_loged_in_user_account_button()
+    Then User click all the options and check all the button show the right page # WalmartUserAccountHomePageSteps.user_click_all_the_options_and_check_all_the_button_show_the_right_page()

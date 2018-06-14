@@ -10,13 +10,13 @@ Feature: Walmart login page funtionalities
     When User write email "demo.auser01@gmail.com"
     And User write password "demowalmart"
     And User click on signin button
-    Then "Login" pagetitle should display
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display
 
   Scenario Outline: 2. User put valid email and valid password
     When User write email "<Email>"
     And User write password "<Password>"
     And User click on signin button
-    Then "Login" pagetitle should display
+    Then "Walmart.com | Save Money. Live Better." pagetitle should display
     Examples:
       |Email                 |Password   |
       |demo.auser01@gmail.com|demowalmart|

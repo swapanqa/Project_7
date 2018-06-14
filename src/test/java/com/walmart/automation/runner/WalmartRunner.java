@@ -9,11 +9,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 //        tags = "@smoke",
 //        tags = "@debug",
-        tags = "@links",
+//        tags = "@links",
 //        dryRun = true,
 
-        features = "src/test/resources/features/homePageFunctionality.feature",
-//        features = "src/test/resources/features/",
+//        features = "src/test/resources/features/signUpPageFunctionality.feature",
+        features = "src/test/resources/features/",
 
         glue = {"com.walmart.automation.steps",
                 "com.walmart.automation.framework.hooks"},
@@ -26,5 +26,4 @@ import org.junit.runner.RunWith;
                   "html:target/cucumber-html-report"}
         )
 public class WalmartRunner {
-
 }
