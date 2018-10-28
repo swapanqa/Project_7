@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 5970579100,
+  "duration": 9829720500,
   "status": "passed"
 });
 formatter.background({
@@ -36,21 +36,21 @@ formatter.match({
   "location": "WalmartHomePageSteps.not_a_valideted_home_page()"
 });
 formatter.result({
-  "duration": 205503600,
+  "duration": 200418500,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 3251904600,
+  "duration": 6573820500,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 22800000,
+  "duration": 20900600,
   "status": "passed"
 });
 formatter.scenario({
@@ -91,22 +91,22 @@ formatter.match({
   "location": "WalmartHomePageSteps.user_click_on_navigation_menu_button()"
 });
 formatter.result({
-  "duration": 271454300,
+  "duration": 203779100,
   "status": "passed"
 });
 formatter.match({
   "location": "WalmartHomePageSteps.globalheadersparkmenu_optionalTopLinks_are_going_to_show_this_options(DataTable)"
 });
 formatter.result({
-  "duration": 197784400,
+  "duration": 376097600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 815219700,
+  "duration": 1032698000,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3956599700,
+  "duration": 3792827300,
   "status": "passed"
 });
 formatter.background({
@@ -135,21 +135,21 @@ formatter.match({
   "location": "WalmartHomePageSteps.not_a_valideted_home_page()"
 });
 formatter.result({
-  "duration": 39376900,
+  "duration": 36266800,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 2627350100,
+  "duration": 5539998100,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 29571200,
+  "duration": 22722500,
   "status": "passed"
 });
 formatter.scenario({
@@ -180,22 +180,22 @@ formatter.match({
   "location": "WalmartHomePageSteps.user_click_on_navigation_menu_button()"
 });
 formatter.result({
-  "duration": 259534900,
+  "duration": 158538400,
   "status": "passed"
 });
 formatter.match({
   "location": "WalmartHomePageSteps.globalheadersparkmenu_optionalTopLinks_are_working_properly()"
 });
 formatter.result({
-  "duration": 2266766100,
+  "duration": 1491516000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 780310800,
+  "duration": 1018923600,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3761072800,
+  "duration": 4096958800,
   "status": "passed"
 });
 formatter.background({
@@ -224,21 +224,21 @@ formatter.match({
   "location": "WalmartHomePageSteps.not_a_valideted_home_page()"
 });
 formatter.result({
-  "duration": 25198200,
+  "duration": 34890300,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 2438048600,
+  "duration": 5706005600,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 17901900,
+  "duration": 13911800,
   "status": "passed"
 });
 formatter.scenario({
@@ -269,22 +269,22 @@ formatter.match({
   "location": "WalmartHomePageSteps.user_click_on_navigation_menu_button()"
 });
 formatter.result({
-  "duration": 230269300,
+  "duration": 148825000,
   "status": "passed"
 });
 formatter.match({
   "location": "WalmartHomePageSteps.globalheadersparkmenu_optionalCampaignLinks_are_working_properly()"
 });
 formatter.result({
-  "duration": 2240450000,
+  "duration": 35465100,
   "status": "passed"
 });
 formatter.after({
-  "duration": 828720400,
+  "duration": 1021327700,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3728777600,
+  "duration": 3924173000,
   "status": "passed"
 });
 formatter.background({
@@ -313,21 +313,21 @@ formatter.match({
   "location": "WalmartHomePageSteps.not_a_valideted_home_page()"
 });
 formatter.result({
-  "duration": 45460400,
+  "duration": 29183600,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 2818826000,
+  "duration": 5597937300,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 6258600,
+  "duration": 13814500,
   "status": "passed"
 });
 formatter.scenario({
@@ -366,7 +366,7 @@ formatter.match({
   "location": "WalmartHomePageSteps.user_click_on_grocery_button()"
 });
 formatter.result({
-  "duration": 3868185900,
+  "duration": 4436746300,
   "status": "passed"
 });
 formatter.match({
@@ -379,15 +379,15 @@ formatter.match({
   "location": "WalmartHomePageSteps.is_going_to_display(String)"
 });
 formatter.result({
-  "duration": 14143900,
+  "duration": 17526200,
   "status": "passed"
 });
 formatter.after({
-  "duration": 932375200,
+  "duration": 1045559800,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3845155300,
+  "duration": 3911569900,
   "status": "passed"
 });
 formatter.background({
@@ -416,21 +416,21 @@ formatter.match({
   "location": "WalmartHomePageSteps.not_a_valideted_home_page()"
 });
 formatter.result({
-  "duration": 52433000,
+  "duration": 52872500,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 2830589100,
+  "duration": 5249165800,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 152352100,
+  "duration": 7649500,
   "status": "passed"
 });
 formatter.scenario({
@@ -461,7 +461,7 @@ formatter.match({
   "location": "WalmartHomePageSteps.user_click_on_account_button()"
 });
 formatter.result({
-  "duration": 170193900,
+  "duration": 147690200,
   "status": "passed"
 });
 formatter.match({
@@ -474,15 +474,15 @@ formatter.match({
   "location": "WalmartHomePageSteps.account_dropdown_is_going_to_display(String)"
 });
 formatter.result({
-  "duration": 99060000,
+  "duration": 140019900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 759854600,
+  "duration": 1037286700,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3743312300,
+  "duration": 3882183600,
   "status": "passed"
 });
 formatter.background({
@@ -511,21 +511,21 @@ formatter.match({
   "location": "WalmartHomePageSteps.not_a_valideted_home_page()"
 });
 formatter.result({
-  "duration": 40760800,
+  "duration": 39417600,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 2789940500,
+  "duration": 5952320300,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 23999300,
+  "duration": 21113900,
   "status": "passed"
 });
 formatter.scenario({
@@ -550,7 +550,7 @@ formatter.match({
   "location": "WalmartHomePageSteps.user_click_on_store_location_button()"
 });
 formatter.result({
-  "duration": 285004600,
+  "duration": 155134000,
   "status": "passed"
 });
 formatter.match({
@@ -563,15 +563,17 @@ formatter.match({
   "location": "WalmartHomePageSteps.location_dropdown_is_going_to_show(String)"
 });
 formatter.result({
-  "duration": 95862500,
-  "status": "passed"
+  "duration": 96370000,
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c[Location]\u003e but was:\u003c[]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.walmart.automation.framework.controller.HomePageController.storeLocationButtonAssertion(HomePageController.java:145)\r\n\tat com.walmart.automation.steps.WalmartHomePageSteps.location_dropdown_is_going_to_show(WalmartHomePageSteps.java:81)\r\n\tat ✽.Then \"Location\" dropdown is going to show(src/test/resources/features/homePageFunctionality.feature:38)\r\n",
+  "status": "failed"
 });
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 823127000,
+  "duration": 2011039700,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3753684200,
+  "duration": 4067283700,
   "status": "passed"
 });
 formatter.background({
@@ -600,21 +602,21 @@ formatter.match({
   "location": "WalmartHomePageSteps.not_a_valideted_home_page()"
 });
 formatter.result({
-  "duration": 36212800,
+  "duration": 24010900,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 3111880300,
+  "duration": 7612141000,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 17298500,
+  "duration": 6778500,
   "status": "passed"
 });
 formatter.scenario({
@@ -639,7 +641,7 @@ formatter.match({
   "location": "WalmartHomePageSteps.user_click_on_cart_button()"
 });
 formatter.result({
-  "duration": 1455487500,
+  "duration": 3232704100,
   "status": "passed"
 });
 formatter.match({
@@ -652,15 +654,15 @@ formatter.match({
   "location": "WalmartHomePageSteps.page_is_going_to_show(String)"
 });
 formatter.result({
-  "duration": 553228300,
+  "duration": 13838900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 852561000,
+  "duration": 991510400,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3762979100,
+  "duration": 3737506400,
   "status": "passed"
 });
 formatter.background({
@@ -689,21 +691,21 @@ formatter.match({
   "location": "WalmartHomePageSteps.not_a_valideted_home_page()"
 });
 formatter.result({
-  "duration": 36103900,
+  "duration": 32952800,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.open_browser_and_start_application()"
 });
 formatter.result({
-  "duration": 3441025500,
+  "duration": 8669746100,
   "status": "passed"
 });
 formatter.match({
   "location": "CommonSteps.walmart_homepage_shoule_dispaly()"
 });
 formatter.result({
-  "duration": 21497400,
+  "duration": 16536800,
   "status": "passed"
 });
 formatter.scenario({
@@ -728,18 +730,18 @@ formatter.match({
   "location": "WalmartHomePageSteps.user_is_in_homepage()"
 });
 formatter.result({
-  "duration": 4000160800,
+  "duration": 3999557700,
   "status": "passed"
 });
 formatter.match({
   "location": "WalmartHomePageSteps.all_link_and_images_are_not_broken()"
 });
 formatter.result({
-  "duration": 19338622100,
+  "duration": 45971822000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 772371100,
+  "duration": 975354900,
   "status": "passed"
 });
 });

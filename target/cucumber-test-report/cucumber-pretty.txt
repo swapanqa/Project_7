@@ -60,6 +60,13 @@ Feature: Walmart home page functionality
   Scenario: 7.Verify account button is working # src/test/resources/features/homePageFunctionality.feature:36
     When User click on store location button   # WalmartHomePageSteps.user_click_on_store_location_button()
     Then "Location" dropdown is going to show  # WalmartHomePageSteps.location_dropdown_is_going_to_show(String)
+      org.junit.ComparisonFailure: expected:<[Location]> but was:<[]>
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at org.junit.Assert.assertEquals(Assert.java:144)
+      	at com.walmart.automation.framework.controller.HomePageController.storeLocationButtonAssertion(HomePageController.java:145)
+      	at com.walmart.automation.steps.WalmartHomePageSteps.location_dropdown_is_going_to_show(WalmartHomePageSteps.java:81)
+      	at ✽.Then "Location" dropdown is going to show(src/test/resources/features/homePageFunctionality.feature:38)
+
 
   Background:                               # src/test/resources/features/homePageFunctionality.feature:2
     Given Not a valideted home page         # WalmartHomePageSteps.not_a_valideted_home_page()
